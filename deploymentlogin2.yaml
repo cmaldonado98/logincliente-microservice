@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: login2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: login2
+  template:
+    metadata:
+      labels:
+        app: login2
+    spec:
+      containers:
+        - name: login2
+          image: cmaldonado98/trainee-tcs:loginpipeline
+          ports:
+            - containerPort: 4008       
+          imagePullPolicy: Always
