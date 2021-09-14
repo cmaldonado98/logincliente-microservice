@@ -56,12 +56,12 @@ jobs:
           cluster_name: ${{ secrets.CLUSTER_NAME }}
           args: apply -f ./deploymentlogin2.yaml
       - name: Build and push CONTAINER_NAME2
-          uses: ianbelcher/eks-kubectl-action@master
-          with:
-            aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            aws_region: ${{ secrets.AWS_REGION }}
-            cluster_name: ${{ secrets.CLUSTER_NAME }}
-            args: apply -f ./servicelogin2.yaml
+        uses: ianbelcher/eks-kubectl-action@master
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ${{ secrets.AWS_REGION }}
+          cluster_name: ${{ secrets.CLUSTER_NAME }}
+          args: apply -f ./servicelogin2.yaml
 
 
