@@ -9,5 +9,5 @@ spec:
   - name: port
     protocol: TCP
     port: 4008
-    targetPort: 4008
+    targetPort: 4005
   type: LoadBalancer
