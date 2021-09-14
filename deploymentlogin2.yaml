@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: login2
-          image: cmaldonado98/trainee-tcs:loginpipeline
+          image: cmaldonado98/trainee-tcs:${{ github.event.head_commit.message }}
           ports:
             - containerPort: 4005
           imagePullPolicy: Always
