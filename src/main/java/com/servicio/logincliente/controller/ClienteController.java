@@ -16,7 +16,7 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
-    @GetMapping("/login2/{cedula}/{passwordCliente}")
+    @GetMapping("/login/{cedula}/{passwordCliente}")
     public Cliente findClienteByCedulas(@PathVariable("cedula") String cedula, @PathVariable("passwordCliente") String passwordCliente){
         log.info("Inside findClienteByCedula method of ClienteController");
         return clienteService.findClienteByCedula(cedula, passwordCliente);
